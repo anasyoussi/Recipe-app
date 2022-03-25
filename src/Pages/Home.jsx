@@ -1,14 +1,14 @@
 import React from 'react'
 import Veggie from '../Components/Veggie'; 
-import Popular from '../Components/Popular';
+import Popular from '../Components/Popular'; 
 
-function Home() {
+function Home() { 
   return (
-    <div>
-        <h1>Hello</h1>
-        <Popular />
-    </div>
+      <div>
+          <Popular /> 
+          <Veggie />
+      </div>
   )
-}
+} 
 
 export default Home
