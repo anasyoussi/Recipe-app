@@ -1,7 +1,7 @@
 import React from 'react'
-import styled from 'styled-components';
+import styled from 'styled-components'; 
 // import { motion } from 'framer-motion/dist/es/index';
-import { Link, useParams } from 'react-router-dom'; 
+import { useParams } from 'react-router-dom'; 
 import { useState } from 'react';
 import { useEffect } from 'react';
 

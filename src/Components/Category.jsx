@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 function Category() { 
   return (
     <List> 
-        <SLink to={"/cuisine/Italien"}>
+        <SLink to={"/cuisine/Italian"}>
             <FaPizzaSlice />
             <h4>Italian</h4>
         </SLink>
@@ -32,7 +32,7 @@ const List = styled.div`
     margin: 2rem 0rem;
 `;
 
-const SLink = styled(NavLink)`
+const SLink = styled(NavLink)` 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,18 +41,18 @@ const SLink = styled(NavLink)`
     margin-right: 2rem;
     text-decoration: none;
     background: linear-gradient(35deg, #494949, #313131); 
-    width: 6rem;
-    height: 6rem;
+    width: 8rem;
+    height: 8rem;
     cursor: pointer;
     transform: scale(0.8);
 
     h4{
         color: white;
-        font-size: 0.8rem;  
+        font-size: 1.2rem;   
     }
     svg{
         color: white;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     &.active{
