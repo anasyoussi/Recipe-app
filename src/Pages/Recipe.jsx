@@ -6,25 +6,17 @@ import { useParams } from 'react-router-dom';
 
 function Recipe() { 
   let params = useParams();  
+
   const [details, setDetails] = useState({}) ;
   const [activeTab, setActiveTab ] = useState('instructions');
   
-  const fetchDetails = async () => {
-    const check = localStorage.getItem('recipe'); 
-    if(check){
-      setDetails(JSON.parse(check)) ;
-      console.log(details); 
-    }else
-    {
+  const fetchDetails = async () => { 
       const data = await fetch(`
         https://api.spoonacular.com/recipes/${params.name}/information?apiKey=${process.env.REACT_APP_API_KEY} 
       `);
       const detailData = await data.json() ;
-      setDetails(detailData.results); 
+      setDetails(detailData); 
       console.log(detailData);
-      localStorage.setItem('recipe', JSON.stringify(detailData));
-    }
-    
   }
 
   useEffect(() => {
